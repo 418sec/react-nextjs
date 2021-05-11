@@ -1,0 +1,85 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.socialAndContactUsBlock {
+    display: block;
+}
+
+.infoBlock {
+    display: block;
+}
+
+.infoBlockTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #434345;
+}
+
+.infoItems {
+    padding-left: 20px;
+}
+
+.cookieOkButton {
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookieOkButton:hover {
+    background-color: #bff79a;
+}
+
+.cookieWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #76dae9;
+    z-index: 3000;
+    box-Shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+.cookieContent {
+    display: flex;
+    justify-Content: center;
+    padding: 10px;
+    color: black;
+}
+
+.cookieMessage {
+    color: white;
+    font-weight: 600
+}
+
+.cookieLearnMore {
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+    .mainContainer {
+        display: flow-root;
+    }
+
+    .formBox {
+        width: 100%;
+        float: none;
+    }
+
+    .infoItems {
+        padding-left: 0;
+    }
+
+    .socialAndContactUsBlock {
+        display: grid;
+        justify-content: center;
+    }
+
+    .cookieContent {
+        display: block;
+    }
+}

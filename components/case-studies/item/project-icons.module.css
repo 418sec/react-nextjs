@@ -1,0 +1,39 @@
+.iconWrapper {
+    display: flex
+}
+
+.iconContent {
+    display: block;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icon {
+    background-color: white;
+    border-radius: 50px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.iconSpan {
+    color: black;
+    font-size: 60px;
+    vertical-align: bottom;
+}
+
+.iconTitle {
+    display: flex;
+    justify-content: center;
+    font-weight: 700
+}
+
+.iconDescription {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+
+}

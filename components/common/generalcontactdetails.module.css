@@ -1,0 +1,87 @@
+.uploadFile {
+    color: #555;
+    line-height: 40px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc
+}
+
+.contact {
+}
+
+.formBox {
+    width: calc(50% - 15px);
+    float: left;
+}
+
+.formBoxLast {
+    width: calc(50% - 15px);
+    float: right;
+}
+
+.uploadLabel {
+    width: 100%;
+    padding: 10px;
+}
+
+.fileInput {
+    display: none;
+}
+
+.contactContent {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.contactCaseButton{
+    width: 200px;
+}
+
+.contactCaseButton:before {
+    background-color: rgba(106, 198, 240, 1);
+}
+
+.contactCaseButton a {
+    color: #0b0b0b;
+    font-weight: bold;
+}
+
+.subscribeForm {
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .subscribeForm {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .contact {
+        display: grid;
+    }
+
+    .formBox {
+        width: 100%;
+        float: none;
+    }
+
+    .formBoxLast {
+        width: 100%;
+        float: none;
+    }
+
+    .contactCaseButton {
+        width: 100%;
+    }
+
+    .subscribeForm {
+        padding: 30px;
+    }
+}

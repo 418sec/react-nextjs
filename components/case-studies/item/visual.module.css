@@ -1,0 +1,122 @@
+.studyCaseBodyInverse {
+    padding: 40px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: black;
+    background-color: white;
+    direction: rtl;
+    border-radius: 0 10% 10% 0;
+    position: relative;
+}
+
+.visualDescription {
+    margin-top: 20px;
+    line-height: 30px;
+    position: relative;
+    top: 40%;
+    max-width: 550px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.visualTitle {
+    color: black;
+    font-weight: 600;
+    position: relative;
+    top: 40%;
+    max-width: 550px;
+    font-size: 36px;
+}
+
+.visualBox {
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: #8790af;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.studyCaseBody {
+    padding: 40px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 10% 0 0 10%;
+    position: relative;
+}
+
+.studyCaseBodyHeader {
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    width: 60%;
+}
+
+.studyCaseButton {
+    background-color: #4cae4c;
+    padding: 10px;
+    border-radius: 20px;
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.studyCaseContent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.studyCaseButton:hover {
+    background-color: #81AC81;
+}
+
+.studyTitleContent {
+    margin-top: 20px;
+    line-height: 25px;
+    display: flex;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .subscribeForm {
+        padding: 30px;
+    }
+
+    .studyCaseBody {
+
+    }
+
+    .studyCaseBodyInverse {
+
+    }
+
+    .studyCaseContent {
+        position: inherit;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .visualBox {
+        display: block;
+    }
+
+    .studyCaseBodyHeader {
+        width: 100%;
+    }
+
+    .studyCaseContent {
+        position: inherit;
+        transform: unset;
+    }
+
+}

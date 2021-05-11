@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            background: #f1f1f1;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors], /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+        .bg_white {
+            background: #ffffff;
+        }
+
+        .bg_light {
+            background: #fafafa;
+        }
+
+        .email-section {
+            padding: 2.5em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #000000;
+            margin-top: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, .4);
+        }
+
+        a {
+            color: #0d0cb5;
+        }
+
+        table {
+        }
+
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+<center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+        <!-- BEGIN BODY -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+               style="border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;">
+            <tr>
+                <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td width="40%" class="logo" style="text-align: left;">
+                                <h1 style="margin: 0;">
+                                    <a style="color: #000000; font-size: 20px; font-weight: 700; text-transform: uppercase;font-family: 'Poppins', sans-serif;"
+                                       href="#">
+                                        Apolemme
+                                    </a>
+                                </h1>
+                            </td>
+                            <td width="60%" class="logo" style="text-align: right;">
+                                <ul style="padding: 0;">
+                                    <li style="list-style: none;display: inline-block; margin-left: 5px;font-size: 13px; font-weight: 500;">
+                                        <a style="color: rgba(0, 0, 0, .4);" href="https://www.apolemme.com">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li style="list-style: none;display: inline-block; margin-left: 5px;font-size: 13px; font-weight: 500;">
+                                        <a style="color: rgba(0, 0, 0, .4);" href="https://www.apolemme.com/#service">
+                                            Services
+                                        </a>
+                                    </li>
+                                    <li style="list-style: none;display: inline-block; margin-left: 5px;font-size: 13px; font-weight: 500;">
+                                        <a style="color: rgba(0, 0, 0, .4);" href="https://www.apolemme.com/approaches">
+                                            About
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr><!-- end tr -->
+            <tr>
+                <td valign="middle" class="hero bg_white"
+                    style="background-image: url(https://www.apolemme.com/email/general-images/bg_1.jpg); background-size: cover; height: 400px;">
+                    <div class="overlay"></div>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="text" style="padding: 0 3em; text-align: center; background-color: #54e4ff">
+                                    <h2 style="color: #ffffff;font-size: 30px;margin-bottom: 0;">
+                                        We Raise Software For The Bar
+                                    </h2>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr><!-- end tr -->
+            <tr>
+                <td class="bg_white">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="bg_white email-section">
+                                <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                    <h2 style="color: #000000;font-size: 20px;margin-top: 0;line-height: 1.4;font-weight: 700;text-transform: uppercase;">
+                                        Thank you for the request
+                                    </h2>
+                                    <p>We will contact with you soon and come up with the best project you need</p>
+                                </div>
+                            </td>
+                        </tr><!-- end: tr -->
+                        <tr>
+                            <td class="bg_light email-section"
+                                style="width: 100%; background: -webkit-linear-gradient(45deg, rgba(0, 220, 255, 1) 0%, rgba(255, 165, 0, 1) 100%);">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td valign="middle" width="50%">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                   width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://www.apolemme.com/email/general-images/about.jpg"
+                                                             alt=""
+                                                             style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td valign="middle" width="50%">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                   width="100%">
+                                                <tr>
+                                                    <td
+                                                            style="
+                                                        text-align: left;
+                                                        padding: 10px 10px 0;">
+                                                        <div class="heading-section">
+                                                            <h2 style="color: #000000;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 1.4;
+    font-weight: 700;
+    text-transform: uppercase;">Our Approach</h2>
+                                                            <p style="color: white">
+                                                                Best results are delivered when all the team members love what they do.
+                                                                Our experience proves it.
+                                                            </p>
+                                                            <p>
+                                                                <a href="https://apolemme.com/approaches"
+                                                                   style="padding: 5px 15px;
+                                                                    display: inline-block;
+                                                                    border-radius: 5px;
+                                                                    background: #0d0cb5;
+                                                                    color: #ffffff;"
+                                                                >
+                                                                    Read more
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr><!-- end: tr -->
+                        <tr>
+                            <td class="bg_white email-section" style="width: 100%;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td valign="middle" width="50%">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                                   width="100%">
+                                                <tr>
+                                                    <td
+                                                            style="
+                                                        text-align: left;
+                                                        padding: 10px 10px 0;">
+                                                        <div>
+                                                            <h2 style="color: #000000;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 1.4;
+    font-weight: 700;
+    text-transform: uppercase;">
+                                                                Our Features
+                                                            </h2>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    Save Your Money
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    We believe, that transparency and efficient process
+                                                                    are main principles of successful project.
+                                                                    Namely, to done project within time and on budged.
+                                                                    We know how to save your money and complete
+                                                                    your project in time
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    The Team
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    Expanding your team maintain 100% control over
+                                                                    project management.
+                                                                    The result-oriented team will take care of your
+                                                                    project. We focus on high-value,
+                                                                    communication and flexibility
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    Consulting
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    Our experience shows, that successful project
+                                                                    depends on an outside perspective
+                                                                    and expertise sharing. We will help you to choose an
+                                                                    appropriate approach to you
+                                                                    project and take the right direction to complete
+                                                                    your goal
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    Support
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    The project support just like oxygen for blood. It
+                                                                    makes a profit when it is supported. We do not stop
+                                                                    on release, we move forward to improve your project
+                                                                    to make it more profitable, more beautiful, faster
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    Full Control
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    Transparency, transparency and transparency again.
+                                                                    You will have the opportunity to monitor all changes
+                                                                    that occur in your project and closely communicate
+                                                                    with all team members.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div style="padding: 0; margin: 0 0 20px 0;width: 100%; float: left;">
+                                                            <img src="https://www.apolemme.com/email/general-images/checked.png"
+                                                                 alt=""
+                                                                 style="width: 50px; max-width: 600px; height: auto; display: block; float: left;">
+                                                            <div style="width: calc(100% - 60px); float: right;">
+                                                                <h3 style="margin-top: 0;margin-bottom: 0;">
+                                                                    Development Standards
+                                                                </h3>
+                                                                <p style="margin: 0;">
+                                                                    We use only the best development standards and help
+                                                                    you choose the perfect solution for your needs. We
+                                                                    will create an MVP and figure out how to make your
+                                                                    project ready as soon as possible and meet the
+                                                                    requirements
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr><!-- end: tr -->
+                    </table>
+
+                </td>
+            </tr><!-- end:tr -->
+            <!-- 1 Column Text + Button : END -->
+        </table>
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+               style="margin: auto; background-color: black">
+            <tr>
+                <td valign="middle" class="footer email-section" style="background: #000000;">
+                    <table>
+                        <tr>
+                            <td valign="top" width="60%" style="padding-top: 20px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                                            <h3 style="color: #ffffff;font-size: 20px;">Contact Info</h3>
+                                            <ul style="color: rgba(255, 255, 255, .5); margin: 0;padding: 0;">
+                                                <li style="list-style: none;margin-bottom: 10px;"><span class="text">Kharkiv, Ukraine</span>
+                                                </li>
+                                                <li style="list-style: none;margin-bottom: 10px;"><span class="text">info@apolemme.com</span>
+                                                </li>
+                                                <li style="list-style: none;margin-bottom: 10px;"><span class="text">+38066655820</span>
+                                                </li>
+                                                <li style="list-style: none;margin-bottom: 10px;"><img src="https://pngimg.com/uploads/skype/skype_PNG5.png" width="20" /><span class="text">&nbsp;dpyvovarenko@apolemme.com</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td valign="top" width="40%" style="padding-top: 20px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="text-align: left; padding-left: 10px;">
+                                            <h3 style="color: #ffffff; font-size: 20px;">Useful Links</h3>
+                                            <ul style="color: white; margin: 0;padding: 0;">
+                                                <li style="list-style: none;margin-bottom: 10px;"><a
+                                                        style="color: rgba(255, 255, 255, 1);" href="https://www.apolemme.com">Home</a></li>
+                                                <li style="list-style: none;margin-bottom: 10px;"><a
+                                                        style="color: rgba(255, 255, 255, 1);" href="https://www.apolemme.com/#service">Services</a>
+                                                </li>
+                                                <li style="list-style: none;margin-bottom: 10px;"><a
+                                                        style="color: rgba(255, 255, 255, 1);" href="https://www.apolemme.com/approaches">Approaches</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr><!-- end: tr -->
+            <tr>
+                <td valign="middle" style="background: #000000; color: rgba(255, 255, 255, .5); padding: 2.5em;">
+                    <table>
+                        <tr>
+                            <td valign="top" width="33.333%">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="text-align: left; padding-right: 10px;">
+                                            <p>&copy; 2019 Corporate. All Rights Reserved</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</center>
+</body>
+</html>

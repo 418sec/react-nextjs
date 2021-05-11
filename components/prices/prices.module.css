@@ -1,0 +1,339 @@
+.surveyBox {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: #8790af;
+    -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.surveyBody {
+    padding: 40px;
+    width: 100%;
+    text-align: left;
+}
+
+.surveyCaseTitle {
+    font-size: x-large;
+    font-weight: 500;
+    color: #0b0b0b;
+    display: flex;
+}
+
+.surveyCaseButtonContent {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.surveyCaseButton {
+    background-color: #f5d206;
+    border-color: #f5d206;
+    padding: 15px;
+    border-radius: 20px;
+    width: 20%;
+    font-size: 20px;
+    color: #0b0b0b;
+}
+
+.contactCaseButton {
+    width: 200px;
+}
+
+.contactCaseButton:before {
+    background-color: rgba(106, 198, 240, 1);
+}
+
+.contactCaseButton a {
+    color: #0b0b0b;
+    font-weight: bold;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #46d9ea;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 6px;
+    width: 8px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.radioContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radioContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radioCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.radioContainer:hover input ~ .radioCheckmark {
+    background-color: #ccc;
+}
+
+.radioContainer input:checked ~ .radioCheckmark {
+    background-color: #2196F3;
+}
+
+.radioCheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radioContainer input:checked ~ .radioCheckmark:after {
+    display: block;
+}
+
+.radioContainer .radioCheckmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.discountLabel {
+    position: absolute;
+    float: left;
+    margin-left: 150px;
+    padding: 4px 8px 2px 4px;
+    width: fit-content;
+    -webkit-border-radius: 0 4px 0 4px;
+    -moz-border-radius: 0 4px 0 4px;
+    border-radius: 0 4px 4px 0;
+    font-size: small;
+}
+
+.discountLabel:after {
+    right: 100%;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 20px solid rgba(136, 183, 213, 0);
+    top: 50%;
+    margin-top: -20px;
+}
+
+.discountLabel:before {
+    content: '';
+    position: relative;
+    top: 42%;
+    right: 100%;
+    width: 7px;
+    height: 7px;
+    opacity: .95;
+    background: #ffffff;
+    border-radius: 7px;
+    -webkit-box-shadow: inset .5px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.discountLabel span {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Raleway", Helvetica, serif;
+}
+
+.lowDiscount {
+    background-color: #99e807;
+}
+
+.lowDiscount:after {
+    border-right-color: #99e807;
+}
+
+.midDiscount {
+    background-color: #07e880;
+}
+
+.midDiscount:after {
+    border-right-color: #07e880;
+}
+
+.highDiscount {
+    background-color: #E80707;
+}
+
+.highDiscount:after {
+    border-right-color: #E80707;
+}
+
+.duration {
+    font-size: 20px;
+}
+
+.subscribeForm {
+    background-color: #ffffff;
+    padding: 60px 60px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.uploadLabel {
+    width: 100%;
+    padding: 10px;
+}
+
+.fileInput {
+    display: none;
+}
+
+.uploadFile {
+    color: #555;
+    line-height: 40px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc
+}
+
+.range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.contact {
+}
+
+.formBox {
+    width: calc(50% - 15px);
+    float: left;
+}
+
+.formBoxLast {
+    width: calc(50% - 15px);
+    float: right;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact {
+        display: grid;
+    }
+
+    .subscribeForm {
+        padding: 0;
+    }
+
+    .surveyCaseButton {
+        width: 100%;
+    }
+
+    .formBox {
+        width: 100%;
+        float: none;
+    }
+
+    .formBoxLast {
+        width: 100%;
+        float: none;
+    }
+}

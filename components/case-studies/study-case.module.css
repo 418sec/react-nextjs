@@ -1,0 +1,83 @@
+.studyCaseBody a {
+    color: white;
+}
+
+.studyCaseBody {
+    padding: 40px;
+    width: 100%;
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.studyCaseBodyHeader {
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 60%;
+}
+
+.studyCaseTitle {
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.studyCaseTitleTechnologies {
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.studyCaseButton {
+    background-color: #68c0e8;
+    padding: 10px 25px;
+    border-radius: 20px;
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.studyCaseButton:hover {
+    background-color: #81AC81;
+}
+
+.studyTitleContent {
+    margin-top: 20px;
+    line-height: 25px;
+    display: flex;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .studyCaseButton {
+        width: 100%;
+    }
+
+    .studyCaseTitle {
+        font-size: larger;
+    }
+
+    .studyCaseBodyHeader {
+        padding: 40px;
+        width: 100%;
+    }
+
+    .studyCaseTitleTechnologies {
+        display: none;
+    }
+
+    .studyTitleContent {
+        display: none;
+    }
+}

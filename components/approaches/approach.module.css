@@ -1,0 +1,201 @@
+.approachBox {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: #8790af;
+    -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.approachBody {
+    padding: 40px;
+    width: 100%;
+    text-align: left;
+}
+
+.approachCaseTitle {
+    font-size: x-large;
+    font-weight: 500;
+    color: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.approachCaseTitle p::first-letter {
+    color: rgb(84, 227, 254);
+}
+
+.flowBox {
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    color: #8790af;
+    -webkit-box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: 250px;
+}
+
+.flowBox:hover {
+    -webkit-box-shadow: 0 0 50px -15px #4d43c6;
+    box-shadow: 0 0 50px -15px #4d43c6;
+}
+
+.flowBox .flowHeader {
+    padding: 40px;
+    color: #768ede;
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(0, 220, 255, 1) 0%, rgba(255, 165, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, rgba(0, 220, 255, 1) 0%, rgba(255, 165, 0, 1) 100%);
+    background: linear-gradient(45deg, rgba(0, 220, 255, 1) 0%, rgba(255, 165, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 40%;
+}
+
+.flowBox .flowHeader:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f7ff;
+    z-index: -1;
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.flowBox:hover .flowHeader {
+    color: #ffffff;
+}
+
+.flowBox:hover .flowHeader:before {
+    opacity: 0;
+}
+
+
+.flowBox .flowHeader .price-icon {
+    margin-top: 10%;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.flowBox .flowHeader .price-icon-choose-us {
+    margin-top: 60%;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+.flowBox .flowHeader h4 {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.flowBox .flowBody {
+    padding: 40px;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+}
+
+.flowBox .flowBody ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flowBox .price-rate {
+    color: #768ede;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.flowBox .price-rate sup {
+    top: -20px;
+    font-size: 26px;
+}
+
+.flowBox .price-rate .rate {
+    font-size: 56px;
+}
+
+.flowBox .price-footer {
+    margin-bottom: 40px;
+}
+
+.flowBox .price-footer .bttn-white {
+    padding: 13px 50px;
+}
+
+.flowBox .price-footer .bttn-white:before {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 100px;
+    left: 2px;
+    top: 2px;
+}
+
+.flowBox .flowHeader .flowIcon {
+    margin-top: 10%;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.surveyCaseButtonContent {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.surveyCaseButton {
+    background-color: #f5d206;
+    border-color: #f5d206;
+    padding: 15px;
+    border-radius: 20px;
+    width: 20%;
+    font-size: 20px;
+    color: #0b0b0b;
+}
+
+@media only screen and (max-width: 767px) {
+    .flowHeader {
+        display: none;
+    }
+
+    .approachBody {
+        padding: 5px;
+    }
+
+    .approachCaseTitle {
+        margin-top: 20px;
+    }
+
+    .flowBox .flowBody {
+        padding: 20px;
+    }
+
+}
